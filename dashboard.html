@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Booking </title>
+  <style>
+     /* General Reset */
+     * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: rgba(1, 225, 255, 0.185);
+      color: #333;
+    }
+
+    /* Topbar Styles */
+    .topbar {
+      background-color: #edf4ef;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .topbar h1 {
+      font-size: 1.5em;
+      color: #2c2092;
+    }
+
+    .search-bar {
+      flex-grow: 1;
+      margin: 0 20px;
+      display: flex;
+      justify-content: right;
+    }
+
+    .search-bar input[type="text"] {
+      width: 60%;
+      padding: 10px;
+      font-size: 1em;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .topbar nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    .topbar nav a {
+      text-decoration: none;
+      color: #333;
+      font-size: 1em;
+    }
+
+    .topbar nav a:hover {
+      color: #2c2092;
+      justify-content: center;
+    }
+
+    /* Main Content */
+    .main-content {
+      padding: 20px;
+    }
+
+    .banner {
+      background-color: #e8f5e9;
+      padding: 20px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .banner .text {
+      max-width: 60%;
+    }
+
+    .banner h2 {
+      font-size: 2.5em;
+      color: #2c2092;
+    }
+
+    .banner p {
+      margin: 10px 0;
+      color: #666;
+    }
+
+    .banner img {
+      max-width: 50%;
+      border-radius: 10px;
+    }
+
+    /* Categories Section */
+    .categories {
+      margin-top: 20px;
+    }
+
+    .categories h3 {
+      margin-bottom: 10px;
+      font-size: 1.5em;
+      color: #333;
+    }
+
+    .categories-list {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .category {
+      flex: 1;
+      background-color: white;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .category h3 {
+      margin-bottom: 10px;
+      color: #2c2092;
+    }
+
+    .category ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .category ul li {
+      margin: 5px 0;
+      color:#2c2092;
+    }
+
+    .category ul li:hover {
+      color: #2c2092;
+      cursor: pointer;
+    }
+
+    .add-recipe-btn {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #2c2092;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1em;
+    }
+
+    .add-recipe-btn:hover {
+      background-color: #2c2092;
+    }
+  .add-recipe-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2c2092;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.add-recipe-btn:hover {
+    background-color: gray;
+}
+  </style>
+</head>
+<body>
+  <!-- Top bar -->
+  <header class="topbar">
+    <h1>Car Booking</h1>
+    <div class="search-bar">
+      <input type="text" placeholder="Search">
+    </div>
+    <nav>
+      <a href="add-edit-entry.html" class="Sign in-btn"> Sign in </a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Banner -->
+    <div class="banner">
+      <div class="text">
+        <h2>Start a Reservation</h2>
+        <p>Car Rental At the speed of Business</p>
+      </div>
+      <img src="images/blog.jpg" alt="Welcome to car booking" height="200" width="2000">
+    </div>
+
+    <!-- Categories -->
+    <section class="categories">
+      <h3>Cost of cars</h3>
+      <div class="categories-list">
+        <!-- Toyota Camry -->
+        <div class="category">
+          <h3>Toyota Camry</h3>
+          <img src="images/camry.jpg" alt="" height="100" width="200">  
+          <ul>
+            <li></li>
+          </ul>
+          <button onclick="fillForm()"  class="add-recipe-btn">50$ per day</a>  </button>
+</div>
+        <!-- Honda  -->
+        <div class="category">
+          <h3>Honda Accord</h3>
+          <img src="images/Honda Accord.jpg" alt="" height="100" width="200">
+          <ul>
+            <li></li>
+          </ul>
+          <button onclick="fillForm()"  class="add-recipe-btn">100$ per day</a>  </button>
+        </div>
+        <!-- SUV -->
+        <div class="category">
+          <h3>SUV</h3>
+          <img src="images/suv.jpg" alt="" height="100" width="200">
+          <ul>
+          <li></li>
+          </ul>
+          <button onclick="fillForm()"  class="add-recipe-btn">150$ per day</a>  </button>
+        </div>
+        <!-- Tesla model 3 -->
+        <div class="category">
+          <h3>Tesla Models 3</h3>
+          <img src="images/model3.jpg" alt="" height="100" width="200">
+          <ul> 
+          <ul>
+            <li></li>
+          </ul>
+          <button onclick="fillForm()"  class="add-recipe-btn">200$ per day</a>  </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+<script src="script/script.js"></script>
+</body>
+</html>
